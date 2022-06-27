@@ -2,15 +2,44 @@
 
 .wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    'header header header header'
+    'status status status status'
+    'caption caption caption caption'
+    'pet-button gudetama gudetama feed-button'
+    'workout-button gudetama gudetama'
+}
+
+.header { grid-area: header; }
+.status { grid-area: status; }
+.caption { grid-area: caption; }
+.gudetama { grid-area: gudetama; }
+.pet-button { grid-area: pet-button; }
+.workout-button { grid-area: workout-button; }
+.feed-button { grid-area: feed-button; }
+
+/* .wrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
   width: 800px;
   max-width: 90%;
   margin: auto;
 }
 
-#header, #status, #caption, #gudetama {
-  grid-column: span 3;
+#header, #status, #caption {
+  grid-column: span 4;
 }
+
+#gudetama {
+  grid-column-start: 2;
+  grid-column-end: -2;
+  grid-row: span 2;
+}
+
+#pet-button, #workout-button, #feed-button {
+  grid-column: span 1;
+  grid-row: span 1;
+} */
 
 body {
   background: #ffd166;
